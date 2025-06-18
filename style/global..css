@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Card Component */
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300;
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    @apply px-6 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium hover:from-blue-700 hover:to-indigo-700 transition-all;
+  }
+  
+  /* Input Field */
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all;
+  }
+  
+  /* Progress Ring Container */
+  .progress-ring-container {
+    @apply relative w-24 h-24;
+  }
+  
+  /* Progress Ring SVG */
+  .progress-ring {
+    @apply w-full h-full;
+    transform: rotate(-90deg);
+  }
+  
+  /* Progress Ring Circle */
+  .progress-ring-circle {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.6s ease;
+    @apply stroke-current fill-transparent;
+  }
+  
+  /* Progress Ring Background */
+  .progress-ring-bg {
+    @apply text-gray-200 stroke-current fill-transparent;
+  }
+  
+  /* Progress Ring Text */
+  .progress-text {
+    @apply absolute inset-0 flex items-center justify-center text-xl font-bold text-gray-800;
+  }
+}
